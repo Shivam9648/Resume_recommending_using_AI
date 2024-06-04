@@ -1,0 +1,33 @@
+{% extends "home.html" %}
+{% block css %}
+<style>
+  body {
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      /* Optionally adjust font family */
+  }
+
+  .card-text {
+      color: #333; /* Set text color for card content */
+  }
+
+  
+      
+</style> 
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>
+        {{resume.name}}
+    </h2>
+  <!-- iframe for pdf -->
+  <iframe src="/static/upload/{{resume.path}}" width="100%" height="1200px"></iframe>
+</div>
+{% endblock %}

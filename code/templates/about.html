@@ -1,0 +1,120 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<head>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffb6d1, #2470a0);
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, #fddb92, #d1fdff);
+
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #010a14;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #010d18;
+            margin-top: 30px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+            color: #333333;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .card {
+            margin-top: 20px;
+            background: linear-gradient(135deg, #d4fc79, #96e6a1);
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .card-title {
+            color: #01070d;
+            text-align: center;
+        }
+
+        .card-text {
+            color: #333333;
+            text-align: center;
+        }
+
+        .card-link {
+            color: #00050a;
+            text-decoration: none;
+            margin-right: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>About NaukriLinkHub</h1>
+
+        <p>
+            Welcome to NaukriLinkHub Pro, your comprehensive solution for streamlined recruitment. Whether you are a company searching for top-tier talent or a candidate looking for the ideal job, NaukriLinkHub Pro is designed to meet all your needs efficiently and effectively.
+        </p>
+
+        <h2>For Employers</h2>
+        <ul>
+            <li><strong>Effortless Hiring:</strong> Our cutting-edge matching algorithm ensures you find the ideal candidate effortlessly.</li>
+            <li><strong>Simplified Recruitment:</strong> Streamline your hiring process and connect with top talent in just a few clicks.</li>
+        </ul>
+
+        <h2>For Job Seekers</h2>
+        <ul>
+            <li><strong>Unlock Opportunities:</strong> Upload your resume and connect with companies looking for your unique skill set.</li>
+            <li><strong>Find Your Fit:</strong> Discover job opportunities tailored to your expertise and career goals.</li>
+        </ul>
+
+        <p>
+            Join NaukriLinkHub Pro today and revolutionize your recruitment experience.
+        </p>
+
+        <h2 class="mt-4 mb-3">Meet the Developer</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Shivam Pandey</h5>
+                <p class="card-text">
+                    Shivam Pandey is a passionate developer dedicated to creating efficient and user-friendly systems. With a strong background in software development, Namita excels at designing solutions that meet user needs and exceed expectations.
+                </p>
+                <a href="mailto:shivampandit9648@gmail.com" class="card-link">Email</a>
+                <a href="https://www.linkedin.com/in/shivam-pandey-ab0b11242/" target="_blank" class="card-link">LinkedIn</a>
+                <a href="https://github.com/Shivam9648" target="_blank" class="card-link">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+{% endblock %}

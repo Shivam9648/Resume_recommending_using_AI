@@ -1,0 +1,51 @@
+{% extends 'layout/base.html' %}
+
+{% block css %}
+<!-- Link to your custom styles.css file -->
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<style>
+
+
+</style>
+
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Login</h2>
+    
+    <form action="/login" method="post">
+        <div class="form-group mb-3">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username"  class="form-control" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+        </div>
+        <div class="form-group mb-3">
+            <input type="submit" value="LOGIN" class="btn btn-primary">
+        </div>
+    </form>
+    <div class="register-link mb-3">
+        Don't have an account yet? <a href="/register">Register here!</a>
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block js %}
+<!-- Your additional JavaScript for the index page goes here -->
+
+{% endblock %}

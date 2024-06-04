@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Project</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="/static/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    {% block css %}
+    <style>
+        body {
+            background: linear-gradient(135deg, #fddb92, #d1fdff);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
+              font-family: Arial, sans-serif;
+              /* Optionally adjust font family */
+          }
+        
+        .card {
+            width: 80%; /* Adjust the width as needed */
+            margin-bottom: 30px; /* Add margin at the bottom */
+            margin-right: 15px; /* Add margin on the right side */
+            margin-left: 15px; /* Add margin on the left side */
+            background: linear-gradient(135deg, #c7a9e9, #a1c4fd); /* Add gradient background */
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate__animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-timing-function: ease-out;
+        }
+
+        .animate__fadeInUp {
+            animation-name: fadeInUp;
+        }
+    </style>
+    {% endblock %}
+    
+</head>
+
+<body>
+    <header>
+        <div class="back_navbar">
+            <nav>
+                <div class="container-fluid d-flex justify-content-between align-items-center">
+                    <!-- Left side of the navbar -->
+                    <div>
+                        <a class="navbar_menu"><i class="fas fa-bars"></i></a>
+                        <a class="navbar_brand" href="/"><span class="blue">Naukri</span><span class="white">LinkHub</span></a>
+                    </div>
+                    
+                    <!-- Right side of the navbar -->
+                    <div>
+                        <!-- Add Home and About links here -->
+                        <ul class="navbar_links list-unstyled d-flex">
+                            <li>
+                                <!-- SVG icon for Home -->
+                                <a href="/home">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-house" viewBox="0 0 16 16">
+                                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <!-- SVG icon for About -->
+                                <a href="/about">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    
+    <div class="drop_menu">
+        <div>
+            <button class="close_menu">&lt; CLOSE MENU</button>
+        </div>
+        <br>
+        <div class="menu_list">
+            <div class="column">
+                <li>Welcome: {{session.username}}</li>
+                <li><a href="/add/resume">ADD RESUME</a></li>
+                <li><a href="/resumes">VIEW RESUMES</a></li>
+                <li><a href="/add/job">ADD JOB</a></li>
+                <li><a href="/show/jobs">VIEW JOBS</a></li>            </div>
+        </div>
+        <div class="menu_list">
+            <div class="column">
+                <li><a href="/settings">Settings</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="darkin_kayn"></div>
+    <main>
+        {% include 'message.html' %}
+        {% block content %}
+        <!-- Your new content starts here -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto text-center">
+                        <h1 class="display-4 mb-3">Welcome to Naukri Link Hub</h1>
+                        <p class="lead mb-4">
+                            Naukri Link Hub is an advanced platform designed to seamlessly connect resumes with job descriptions using AI technology. 
+                            Our system enables employers to upload job descriptions and candidates to submit their resumes, creating an efficient process 
+                            for matching job openings with qualified candidates.
+                        </p>
+                        
+                        <p class="lead mb-4">
+                            Leveraging artificial intelligence, Naukri Link Hub accurately aligns the skills required for a job with those highlighted 
+                            in candidates' resumes. This automated matching process significantly reduces the time and effort traditionally needed in the 
+                            hiring process, allowing companies to quickly and effectively identify ideal candidates.
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm animate__animated animate__fadeInUp">
+                    <div class="card-body">
+                        <h5 class="card-title">Resume: Dos and Don'ts</h5>
+                        <p class="card-text">Tips on how to build a stellar resume.</p>
+                        <a href="https://www.themuse.com/advice/42-resume-dos-and-donts-every-job-seeker-should-know" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More cards -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm animate__animated animate__fadeInUp">
+                    <div class="card-body">
+                        <h5 class="card-title">Strategies to Hire Employees</h5>
+                        <p class="card-text">Tips on how to hire employees</p>
+                        <a href="https://www.forbes.com/advisor/business/how-to-hire-employees/" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm animate__animated animate__fadeInUp">
+                    <div class="card-body">
+                        <h5 class="card-title">Best HR Resources</h5>
+                        <p class="card-text">List of top 21 HR Resources</p>
+                        <a href="https://www.bamboohr.com/blog/top-websites-for-hr-professionals" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Your new content ends here -->
+        {% endblock %}    
+    </main>
+
+
+    <footer>
+        <!-- place footer here -->
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    {% block js %}{% endblock %}
+    <script>
+        var dropMenu = document.querySelector('.drop_menu');
+        var openButton = document.querySelector('.navbar_menu');
+        var closeButton = document.querySelector('.close_menu');
+        var darkBackground = document.querySelector('.darkin_kayn');
+        var isOpen = false;
+
+        function toggleMenu() {
+            isOpen = !isOpen;
+            dropMenu.classList.toggle('open', isOpen);
+            darkBackground.classList.toggle('open', isOpen);
+        }
+
+        openButton.addEventListener('click', toggleMenu);
+        closeButton.addEventListener('click', toggleMenu);
+        darkBackground.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>
+
