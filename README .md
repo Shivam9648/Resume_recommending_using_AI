@@ -1,7 +1,7 @@
 
 # Resume_recommending_using_AI
 
-The primary objective of the AI-Driven Recruitment Platform is to revolutionize the hiring process by leveraging advanced technologies. The project aims to create a user-friendly web application that seamlessly connects recruiters and job seekers while incorporating artificial intelligence (AI) for efficient resume screening and recommendation. By automating key aspects of recruitment, the goal is to enhance accuracy, reduce biases, and streamline the overall hiring experience.
+The primary objective of the AI-Driven Recruitment Platform is to revolutionize the hiring process by leveraging advanced technologies. The project aims to create a user-friendly web application that seamlessly connects recruiters and job seekers while incorporating artificial intelligence (AI) for efficient resume screening and recommendation. By automating key aspects of recruitment, the goal is to enhance accuracy, reduce biases, and streamline the overall hiring experience
 
 
 ## Features
