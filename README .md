@@ -49,4 +49,8 @@ passward- admin
 email- admin@gmail.com
 
 ## Screenshots
+![Screenshot 2024-06-04 211729](https://github.com/Shivam9648/Resume_recommending_using_AI/assets/140846983/18283ed5-64fc-4f79-9076-7b4e7ab67740)
+![Screenshot 2024-06-04 211729](https://github.com/Shivam9648/Resume_recommending_using_AI/assets/140846983/18283ed5-64fc-4f79-9076-7b4e7ab67740)
+
+
 
